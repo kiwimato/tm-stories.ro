@@ -1,0 +1,192 @@
+.page-container {
+  background-color: #F5F5F5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 99.2vw;
+}
+
+.intro-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 20;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.intro-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 5% 70%;
+  grid-template-rows: 15% 65% 20%;
+  padding: 2rem 15%;
+}
+
+.page-title {
+  font-family: 'YesevaOne-Regular', Courier, monospace;
+  font-size: 10rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.intro {
+  grid-row-start: 2;
+}
+
+.main-image {
+  width: 100%;
+  height: 75vh;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  z-index: 10;
+}
+
+.highlight-text {
+  font-size: 3rem;
+  font-family: 'YesevaOne-Regular';
+  font-weight: 100;
+  line-height: 1.4;
+  padding-bottom: 2rem;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 60%;
+  z-index: 0;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 350;
+  line-height: 1.8;
+  grid-column-start: 1;
+}
+
+.content-container {
+  padding: 1.5rem 15%;
+}
+
+@media (max-width: 1800px) {
+  .page-title {
+    font-size: 8rem;
+  }
+
+  .intro-container {
+    padding: 2rem 10%;
+  }
+
+  .content-container {
+    padding: 1rem 10%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .intro-container {
+    padding: 1rem 5%;
+  }
+
+  .content-container {
+    padding: 1rem 5%;
+  }
+}
+
+@media (max-width: 960px) {
+  .cover, .intro-container {
+    height: 32rem;
+  }
+
+  .main-image {
+    height: 30rem;
+  }
+
+  .page-title {
+    font-size: 6rem;
+  }
+
+  .highlight-text {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover, .intro-container {
+    height: 28rem;
+  }
+
+  .intro-container {
+    padding: 3rem 2rem 0 3rem;
+  }
+
+  .page-title {
+    font-size: 5rem;
+  }
+
+  .content-container {
+    padding: 1rem 2rem 0 2rem;
+  } 
+
+  .main-image {
+    height: 18rem;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .cover, .intro-container {
+    height: 24rem;
+  }
+
+  .main-image {
+    height: 16rem;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .highlight-text {
+    font-size: 1.7rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .cover, .intro-container {
+    height: 20rem;
+  }
+
+  .main-image {
+    height: 16rem;
+  }
+
+  .intro-container {
+    padding: 3rem 2rem 0 2rem;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .highlight-text {
+    font-size: 1.3rem;
+    padding-bottom: 1.2rem;
+  }
+}

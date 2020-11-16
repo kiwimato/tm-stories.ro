@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.tm-icon {
+  color: white;
+
+  &--dark {
+    color: $black;
+  }
+}
+
+.text-white {
+  color: white;
+}
+
+.text-dark {
+  color: $black;
+}
+
+h2, h3, h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.half-half-container {
+  display: grid;
+  grid-template-columns: 48% 4% 48%;
+  height: auto;
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+  }
+
+  div:nth-child(2) {
+    grid-column-start: 3;
+  }
+
+  &--responsive {
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    
+      div:nth-child(2) {
+        grid-column-start: 1;
+      }
+    }
+  }
+}
+
+.three-thirds-container {
+  display: grid;
+  grid-template-columns: 30% 5% 30% 5% 30%;
+  height: auto;
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+  }
+
+  div:nth-child(2) {
+    grid-column-start: 3;
+  }
+
+  div:nth-child(3) {
+    grid-column-start: 5;
+  }
+
+  &--big-photo {
+    div:nth-child(1) {
+      grid-column-start: 1;
+    }
+
+    div:nth-child(2) {
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
+  }
+
+  &--responsive {
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    
+      div:nth-child(2) {
+        grid-column-start: 1;
+      }
+
+      div:nth-child(3) {
+        grid-column-start: 1;
+      }
+    }
+  }
+}
+
+.four-quarters-container {
+  display: grid;
+  grid-template-columns: 23% 2% 23% 2% 23% 2% 23%;
+  height: auto;
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+  }
+
+  div:nth-child(2) {
+    grid-column-start: 3;
+  }
+
+  div:nth-child(3) {
+    grid-column-start: 5;
+  }
+
+  div:nth-child(4) {
+    grid-column-start: 7;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 -14px 0 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  line-height: inherit;
+
+  &:focus, &:active {
+    outline: none;
+    box-shadow: 0;
+    border: 0;
+  }
+}
+
+.before-enter {
+  opacity: 0;
+  transition: 1s all ease-out;
+  transform: translateY(100px);
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  color: $deep-blush;
+
+  &:visited {
+    color: $deep-blush;
+  }
+}
+
+.avoid-clicks {
+  pointer-events: none;
+}
+
+strong {
+  font-family: 'YesevaOne-Regular';
+  font-size: 2rem;
+  font-weight: 100;
+}
