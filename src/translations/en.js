@@ -70,7 +70,9 @@ export const EN_TRANSLATIONS = {
     'text-23': otoman.text['text-23']
   },
   periods: {
+    prehistoric: 'Prehistoric Period',
     medieval: 'Middle Ages',
-    otoman: 'Ottoman Period'
+    otoman: 'Ottoman Period',
+    habsburgic: 'Habsburgic Period'
   }
 };

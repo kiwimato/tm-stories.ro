@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Menu from './components/Menu'
+import Menu from './components/menu/Menu'
 import HamburgerMenu from './components/generic/HamburgerMenu.vue'
 
 export default {
@@ -29,13 +29,12 @@ export default {
       openMenu: false,
     }
   },
+  computed: {
+    documentTitle() {
+      return this.$t(this.$route.meta.title);
+    }
+  },
   watch: {
-    $route: {
-      immediate: true,
-      handler(val) {
-        document.title = this.$t(val.meta.title)
-      }
-    },
     openMenu(val) {
       const body = document.body;
       if (val === true) {

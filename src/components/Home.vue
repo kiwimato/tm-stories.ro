@@ -40,7 +40,7 @@ export default {
   mounted() {
     window.setTimeout(() => {
       this.visible = true
-    }, 500)
+    }, 2000)
   }
 }
 </script>

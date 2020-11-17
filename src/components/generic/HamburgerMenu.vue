@@ -149,9 +149,9 @@ export default {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 960px) {
   .hamburger-menu {
-    margin: 1.8rem 2rem;
+    margin: 1.5rem 2rem;
   }
 }
 </style>

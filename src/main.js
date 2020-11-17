@@ -97,7 +97,7 @@ const router = new VueRouter({
 Vue.use(VueRouter)
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
+  document.title = i18n.t(to.meta.title)
   next()
 })
 

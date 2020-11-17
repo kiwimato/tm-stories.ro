@@ -70,7 +70,9 @@ export const RO_TRANSLATIONS = {
     'text-23': otoman.text['text-23']
   },
   periods: {
+    prehistoric: 'Perioada preistorică',
     medieval: 'Evul Mediu',
-    otoman: 'Perioada otomană'
+    otoman: 'Perioada otomană',
+    habsburgic: 'Perioada habsburgică'
   }
 };
