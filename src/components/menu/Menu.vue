@@ -79,7 +79,7 @@ export default {
   top: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.5rem 325px auto;
+  grid-template-columns: 1.5rem 400px auto;
   grid-template-rows: 10% 50% auto 10%;
 }
 
@@ -146,6 +146,10 @@ export default {
 }
 
 @media (max-width: 960px) {
+  .menu {
+    grid-template-columns: 1.5rem 325px auto;;
+  }
+
   .utilities {
     padding: 1rem 0.5rem 0 1rem;
   }
