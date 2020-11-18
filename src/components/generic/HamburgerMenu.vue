@@ -154,4 +154,10 @@ export default {
     margin: 1.5rem 2rem;
   }
 }
+
+@media (max-width: 500px) {
+  .hamburger-menu {
+    margin: 1rem;
+  }
+}
 </style>

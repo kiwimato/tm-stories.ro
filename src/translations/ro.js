@@ -73,6 +73,8 @@ export const RO_TRANSLATIONS = {
     prehistoric: 'Perioada preistorică',
     medieval: 'Evul Mediu',
     otoman: 'Perioada otomană',
-    habsburgic: 'Perioada habsburgică'
+    habsburgic: 'Perioada habsburgică',
+    wars: 'Perioada războaielor mondiale',
+    modern: 'Timişoara modernă'
   }
 };

@@ -1,31 +1,28 @@
 <template>
   <div class="menu">
     <div class="utilities">
-      <div class="useful-links flex align-start space-between">
+      <div class="left-side">
+        <div class="useful-links flex align-start space-between">
+          <div
+            v-for="link in links"
+            :key="link.value"
+            class="link medium-text pointer"
+            @click="$emit('open-page', link.value)"
+          >
+            {{ link.text }}
+          </div>
+        </div>
         <div
-          v-for="link in links"
-          :key="link.value"
-          class="link medium-text pointer"
-          @click="$emit('open-page', link.value)"
+          class="medium-text email pointer"
+          href="mailto:povestiri@tmstories.ro"
         >
-          {{ link.text }}
+          povestiri@tmstories.ro
         </div>
       </div>
-      <div 
-        class="medium-text email pointer"
-        href="mailto:povestiri@tmstories.ro"
-      >
-        povestiri@tmstories.ro
-      </div>
-      <social-links />
-       <div class="language-select">
-        <language-select />
-      </div>
-      <div class="cjt flex align-center justify-end">
-        <div class="cjt-logo mr-2" />
-        <div class="cjt-text">
-          <div>{{ $t('about.financed') }}</div>
-          <div class="uppercase">Consiliul Judeţean Timiş</div>
+      <div class="right-side">
+        <social-links />
+        <div class="language-select">
+          <language-select />
         </div>
       </div>
     </div>
@@ -33,6 +30,13 @@
       class="periods"
       @open-page="$emit('open-page', $event)"
     />
+    <div class="cjt flex align-center justify-end">
+      <div class="cjt-logo mr-1" />
+      <div class="cjt-text">
+        <div>{{ $t('about.financed') }}</div>
+        <div class="uppercase">Consiliul Judeţean Timiş</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -75,7 +79,7 @@ export default {
   top: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.5rem 30% 50% auto 1.5rem;
+  grid-template-columns: 1.5rem 400px auto;
   grid-template-rows: 10% 50% auto 10%;
 }
 
@@ -93,8 +97,8 @@ export default {
   grid-column-start: 3;
 }
 
-.email, .social-media-links, .language-select {
-  margin-top: 2rem;
+.useful-links, .email, .social-media-links {
+  margin-bottom: 2rem;
   font-size: 1.2rem;
 }
 
@@ -137,12 +141,15 @@ export default {
 
 @media(max-width: 1280px) {
   .menu {
-    grid-template-columns: 1.5rem 30% auto 1.5rem;
     grid-template-rows: 10% auto 10%;
   }
 }
 
 @media (max-width: 960px) {
+  .menu {
+    grid-template-columns: 1.5rem 325px auto;;
+  }
+
   .utilities {
     padding: 1rem 0.5rem 0 1rem;
   }
@@ -159,22 +166,76 @@ export default {
   }
 
   .utilities {
-    padding: 1rem 0.5rem 0 1rem;
+    padding: 1rem 1rem 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left-side, .right-side {
+      width: 50%;
+    }
   }
 
-  .email, .social-media-links, .language-select {
-    margin-top: 1rem;
+  .useful-links, .email, .social-media-links, .language-select {
+    margin-top: 0;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
   }
 
+  .email {
+    line-height: 32px;
+  }
+
   .menu {
-    grid-template-columns: 1.5rem auto 1.5rem;
-    grid-template-rows: 10% 30% 40% 10%;
+    grid-template-columns: 1.5rem auto;
+    grid-template-rows: 10% 15% 55% 10%;
   }
 
   .periods {
     grid-row-start: 3;
     grid-column-start: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    grid-template-columns: 0 auto;
+    grid-template-rows: 10% 15% 55% 10%;
+  }
+
+  .cjt {
+    left: 1rem;
+  }
+
+  .utilities {
+    justify-content: space-between;
+
+    .left-side {
+      width: 70%;
+    }
+    .right-side {
+      width: 30%;
+    }
+  }
+
+  .link, .email, .social-media-links, .language-select {
+    font-size: 1rem;
+  }
+
+  .cjt-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .utilities {
+    justify-content: space-between;
+
+    .left-side {
+      width: 60%;
+    }
+    .right-side {
+      width: 40%;
+    }
   }
 }
 </style>
