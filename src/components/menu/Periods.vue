@@ -5,7 +5,7 @@
     >
       <div class="text-background" />
       <div class="period-text">
-        {{ $t('periods.prehistoric') }}
+        {{ $t('antiquity.title') }}
       </div>
       <div class="white-stripe" />
     </div>

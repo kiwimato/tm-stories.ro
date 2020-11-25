@@ -34,7 +34,7 @@
       <div class="cjt-logo mr-1" />
       <div class="cjt-text">
         <div>{{ $t('about.financed') }}</div>
-        <div class="uppercase">Consiliul Judeţean Timiş</div>
+        <div class="uppercase">{{ $t('about.cjt') }}</div>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@ export default {
 
 .link, .email, .language-select {
   &:hover {
-    color: $cyan;
+    color: $coral;
   }
 }
 

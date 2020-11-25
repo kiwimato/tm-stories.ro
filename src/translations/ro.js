@@ -7,7 +7,8 @@ export const RO_TRANSLATIONS = {
     'text-1': about.text['text-1'],
     'text-2': about.text['text-2'],
     'text-3': about.text['text-3'],
-    'financed': 'Proiect finanţat de',
+    financed: 'Proiect finanţat de',
+    cjt: 'Consiliul Judeţean Timiş'
   },
   errors: {
     error404: 'Oops! Se pare că te-ai rătăcit!'

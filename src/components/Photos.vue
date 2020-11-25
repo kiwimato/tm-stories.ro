@@ -54,8 +54,10 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.onScroll);
-    this.getData(0);
     this.urls = urls;
+  },
+  async mounted() {
+    await this.getData(0);
   },
   destroyed () {
     window.removeEventListener('scroll', this.onScroll);

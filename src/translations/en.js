@@ -7,7 +7,8 @@ export const EN_TRANSLATIONS = {
     'text-1': about.text['text-1'],
     'text-2': about.text['text-2'],
     'text-3': about.text['text-3'],
-    'financed': 'This project was financed by',
+    financed: 'This project was financed by',
+    cjt: 'Timiş County Council'
   },
   errors: {
     error404: 'Oops! Looks like you\'re lost!'
