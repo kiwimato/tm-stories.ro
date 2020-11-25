@@ -80,7 +80,6 @@ export default {
     position: absolute;
     width: 28%;
     height: calc(100vh/6.6);
-    background-color: $cyan;
     transform: skew(-15deg);
     margin-left: -24px;
     z-index: 30;
@@ -105,7 +104,7 @@ export default {
 
   &:nth-of-type(1) {
     .text-background {
-      background-color: $keppel;
+      background-color: $coral;
     }
   }
 
@@ -123,7 +122,13 @@ export default {
 
   &:nth-of-type(4) {
     .text-background {
-      background-color: $coral;
+      background-color: darken($coral, 5%);
+    }
+  }
+
+  &:nth-of-type(5) {
+    .text-background {
+      background-color: $cyan;
     }
   }
 

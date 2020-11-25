@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="page-container">
+    <div 
+      class="page-container"
+    >
       <div class="intro-container">
         <div class="photo-container">
           <div class="building-1" />
@@ -120,7 +122,11 @@ export default {
 
 <style lang="scss" scoped>
 .intro-container {
-  background-color: lighten($gold, 10%);
+  background-color: lighten($anzac, 20%);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .photo {

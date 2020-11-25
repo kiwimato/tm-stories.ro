@@ -13,12 +13,17 @@ export default {
   props: {
     width: {
       type: Number
+    },
+    height: {
+      type: Number,
+      default: 200
     }
   },
   computed: {
     computedStyle() {   
       return {
-        width: `${this.width}px`, 
+        width: `${this.width}px`,
+        height: `${this.height}px`
       };
     }
   }
@@ -30,7 +35,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
 .animation {

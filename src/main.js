@@ -21,7 +21,6 @@ import ScrollAnimation from './directives/scroll-animation'
 // third party libraries
 import AnimateCSS from 'animate.css'
 import HoverCSS from 'hover.css'
-import VModal from 'vue-js-modal'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -40,7 +39,6 @@ const TRANSLATIONS = {
 Vue.use(VueI18n)
 Vue.use(AnimateCSS)
 Vue.use(HoverCSS)
-Vue.use(VModal)
 
 const i18n = new VueI18n({
   locale: 'ro',

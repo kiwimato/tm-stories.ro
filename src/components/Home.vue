@@ -1,7 +1,14 @@
 <template>
   <div>
-    <loader v-if="!visible" key="loader" />
-    <div class='home'>
+    <loader 
+      v-if="!visible"
+      key="loader"
+      :height="computedHeight"
+    />
+    <div
+      ref="home"
+      class="home"
+    >
     <div
       v-if="visible"
       class="background-image animate__animated animate__fadeInRight"
@@ -37,10 +44,15 @@ export default {
       visible: false,
     }
   },
+  computed: {
+    computedHeight() {
+      return window.innerHeight * 0.9;
+    }
+  },
   mounted() {
     window.setTimeout(() => {
       this.visible = true
-    }, 2000)
+    }, 500)
   }
 }
 </script>

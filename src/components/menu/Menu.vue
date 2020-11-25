@@ -116,7 +116,7 @@ export default {
 
 .link, .email, .language-select {
   &:hover {
-    color: $deep-blush;
+    color: $cyan;
   }
 }
 

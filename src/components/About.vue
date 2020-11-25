@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  background-color: lighten($cyan, 10%);
+  background-color: lighten($gold, 10%);
   height: 95.4vh;
 }
 

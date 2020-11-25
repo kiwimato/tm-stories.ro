@@ -1,5 +1,8 @@
 <template>
-  <div class="masonry" ref="container">
+  <div
+    ref="container"
+    class="masonry"
+  >
     <loader v-if="loading && !items.length" />
     <div
       class="photos-container"
@@ -8,29 +11,34 @@
       <div
         v-for="(img, i) in items" :key="i"
         class="photo pointer"
-        @click="onPhotoClick($event, i)"
+        @click="onPhotoClick(img)"
       >
         <img 
           :src="`data:image/png;base64, ${img}`"
         />
-        <modal :name="`image-${i}`">
-          <img 
-            :src="`data:image/png;base64, ${img}`"
-          />
-        </modal>
       </div>
     </div>
-    <loader v-if="loading && items.length > 0" :width="computedWidth" />
+    <loader
+      v-if="loading && items.length > 0"
+      :width="computedWidth"
+    />
+    <tm-modal 
+      v-if="showPhotoModal"
+      :img="selectedImg"
+      @close="closeModal"
+    />
   </div>
 </template>
 
 <script>
 import Loader from './Loader'
+import TMModal from './Modal'
 
 export default {
   name: 'TmMasonry',
   components: {
     loader: Loader,
+    tmModal: TMModal
   },
   props: {
     items: {
@@ -44,6 +52,7 @@ export default {
   },
   data() {
     return {
+      selectedImg: null,
       showPhotoModal: false
     }
   },
@@ -59,8 +68,14 @@ export default {
     }
   },
   methods: {
-    onPhotoClick(event, index) {
-      this.$modal.show(`image-${index}`);
+    closeModal() {
+      this.showPhotoModal = false;
+      document.body.style.overflow = "auto";
+    },
+    onPhotoClick(img) {
+      this.selectedImg = img;
+      this.showPhotoModal = true;
+      document.body.style.overflow = "hidden";
     }
   }
 }
@@ -84,6 +99,10 @@ export default {
     height: 300px;
     object-fit: cover;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 @media(max-width: 960px) {
