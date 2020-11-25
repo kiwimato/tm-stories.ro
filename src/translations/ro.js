@@ -18,6 +18,9 @@ export const RO_TRANSLATIONS = {
   languageSelect: {
     text: 'Vezi pagina în',
   },
+  antiquity: {
+    title: 'Antichitate'
+  },
   medieval: {
     title: 'Evul Mediu',
     intro: medieval.text.intro,
@@ -39,7 +42,7 @@ export const RO_TRANSLATIONS = {
   menu: {
     home: 'Acasă',
     about: 'Despre',
-    partners: 'Parteneri',
+    photos: 'Galerie foto',
     contact: 'Contact'
   },
   otoman: {

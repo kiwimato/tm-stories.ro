@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="right-side">
-        <social-links />
+        <social-links class="social-media-links" />
         <div class="language-select">
           <language-select />
         </div>
@@ -61,6 +61,9 @@ export default {
         }, {
           text: this.$t('menu.about'),
           value: 'about'
+        }, {
+          text: this.$t('menu.photos'),
+          value: 'photos'
         }
       ]
     }
@@ -97,7 +100,7 @@ export default {
   grid-column-start: 3;
 }
 
-.useful-links, .email, .social-media-links {
+.useful-links, .email, .social-media-links, .language-select {
   margin-bottom: 2rem;
   font-size: 1.2rem;
 }
@@ -105,6 +108,10 @@ export default {
 .link {
   padding-right: 1.5rem;
   font-size: 1.2rem;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
 }
 
 .link, .email, .language-select {
@@ -147,7 +154,7 @@ export default {
 
 @media (max-width: 960px) {
   .menu {
-    grid-template-columns: 1.5rem 325px auto;;
+    grid-template-columns: 1.5rem 350px auto;;
   }
 
   .utilities {
@@ -170,15 +177,26 @@ export default {
     flex-direction: row;
     justify-content: space-between;
 
-    .left-side, .right-side {
-      width: 50%;
+    .left-side {
+      width: 60%;
+    }
+
+    .right-side {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
     }
   }
 
   .useful-links, .email, .social-media-links, .language-select {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+  }
+
+  .language-select {
+    margin-right: 14px;
   }
 
   .email {
@@ -198,7 +216,7 @@ export default {
 
 @media (max-width: 500px) {
   .menu {
-    grid-template-columns: 0 auto;
+    grid-template-columns: 0.5rem auto 0.5rem;
     grid-template-rows: 10% 15% 55% 10%;
   }
 
@@ -207,18 +225,43 @@ export default {
   }
 
   .utilities {
-    justify-content: space-between;
-
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 1rem;
+    
     .left-side {
-      width: 70%;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
+
     .right-side {
-      width: 30%;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 
-  .link, .email, .social-media-links, .language-select {
+  .link, .email, .language-select {
     font-size: 1rem;
+  }
+
+  .language-select {
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+  }
+
+  .email {
+    line-height: 1;
+  }
+
+  .useful-links, .email, .social-media-links {
+    margin-bottom: 1rem;
+  }
+
+  .link {
+    padding-right: 1.1rem;
   }
 
   .cjt-text {
@@ -231,10 +274,11 @@ export default {
     justify-content: space-between;
 
     .left-side {
-      width: 60%;
+      width: 70%;
     }
+
     .right-side {
-      width: 40%;
+      width: 30%;
     }
   }
 }

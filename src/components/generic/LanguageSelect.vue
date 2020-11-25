@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="language-select-wrapper">
     <label class="medium-text pr-1">
       <font-awesome-icon icon="globe" />
     </label>
@@ -38,7 +38,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.language-select-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .select-langauge {
   font-size: 1.1rem;
 }

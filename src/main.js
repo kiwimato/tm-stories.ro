@@ -6,8 +6,10 @@ import VueI18n from 'vue-i18n'
 import App from './App.vue'
 import About from './components/About'
 import Home from './components/Home'
+import Antiquity from './components/Antiquity'
 import Medieval from './components/Medieval'
 import Otoman from './components/Otoman'
+import Photos from './components/Photos'
 // import Habsburg from './components/Habsburg'
 // import Austrian from './components/Austrian'
 // import Modern from './components/Modern'
@@ -17,8 +19,9 @@ import Error404 from './components/generic/Error404'
 import ScrollAnimation from './directives/scroll-animation'
 
 // third party libraries
-import AnimateCSS from 'animate.css';
-import HoverCSS from 'hover.css';
+import AnimateCSS from 'animate.css'
+import HoverCSS from 'hover.css'
+import VModal from 'vue-js-modal'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -35,8 +38,9 @@ const TRANSLATIONS = {
 }
 
 Vue.use(VueI18n)
-Vue.use(AnimateCSS);
-Vue.use(HoverCSS);
+Vue.use(AnimateCSS)
+Vue.use(HoverCSS)
+Vue.use(VModal)
 
 const i18n = new VueI18n({
   locale: 'ro',
@@ -68,6 +72,12 @@ const routes = [
     meta: { title: 'menu.home' }
   },
   { 
+    path: '/antiquity',
+    name: 'antiquity',
+    component: Antiquity,
+    meta: { title: 'antiquity.title' }
+  },
+  { 
     path: '/medieval',
     name: 'medieval',
     component: Medieval,
@@ -78,6 +88,12 @@ const routes = [
     name: 'otoman',
     component: Otoman,
     meta: { title: 'otoman.title' }
+  },
+  {
+    path: '/photos',
+    name: 'photos',
+    component: Photos,
+    meta: { title: 'menu.photos' }
   },
   // { path: '/habsburg', component: Habsburg },
   // { path: '/austrian', component: Austrian },

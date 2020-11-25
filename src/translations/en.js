@@ -18,6 +18,9 @@ export const EN_TRANSLATIONS = {
   languageSelect: {
     text: 'See the website in',
   },
+  antiquity: {
+    title: 'Antiquity'
+  },
   medieval: {
     title: 'Middle Ages',
     intro: medieval.text.intro,
@@ -39,7 +42,7 @@ export const EN_TRANSLATIONS = {
   menu: {
     home: 'Home',
     about: 'About',
-    partners: 'Partners',
+    photos: 'Photo gallery',
     contact: 'Contact'
   },
   otoman: {

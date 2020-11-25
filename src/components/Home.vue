@@ -1,6 +1,6 @@
 <template>
   <div>
-    <loader v-if="visible" key="loader" />
+    <loader v-if="!visible" key="loader" />
     <div class='home'>
     <div
       v-if="visible"

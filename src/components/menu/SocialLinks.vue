@@ -7,7 +7,8 @@
       <font-awesome-icon 
         :icon="['fab', 'facebook']"
         size="lg"
-        class="pr-2 pointer"
+        class="pointer"
+        id="facebook"
       />
     </a>
     <a
@@ -28,3 +29,15 @@ export default {
   name: 'SocialLinks'
 }
 </script>
+
+<style lang="scss" scoped>
+#facebook {
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  #facebook {
+    padding-right: 1.1rem;
+  }
+}
+</style>

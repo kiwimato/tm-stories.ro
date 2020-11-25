@@ -1,7 +1,7 @@
 <template>
   <div class="periods-container">
     <div
-      class="period-card img-1 pointer flex align-center justify-end text-black"
+      class="period-card img-1 flex align-center justify-end text-black"
     >
       <div class="text-background" />
       <div class="period-text">
@@ -105,7 +105,7 @@ export default {
 
   &:nth-of-type(1) {
     .text-background {
-      background-color: $lilac;
+      background-color: $keppel;
     }
   }
 
@@ -149,7 +149,7 @@ export default {
 }
 
 .img-1 {
-  background: url('../../assets/images/preistorie_2_min.jpg') no-repeat top/100%;
+  background: url('../../assets/images/antichitate_min.png') no-repeat center/100%;
 }
 
 .img-2 {
@@ -225,7 +225,7 @@ export default {
 
 @media(max-width: 500px) {
   .periods-container {
-    padding: 0 1rem 0 2.2rem;
+    padding: 0 0.5rem 0 2.2rem;
   }
 
   .period-card {
