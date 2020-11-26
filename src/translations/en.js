@@ -77,7 +77,7 @@ export const EN_TRANSLATIONS = {
     prehistoric: 'Prehistoric Period',
     medieval: 'Middle Ages',
     otoman: 'Ottoman Period',
-    habsburgic: 'Habsburgic Period',
+    habsburgic: 'Habsburgic and Austro-Hungarian Period',
     wars: 'World Wars Period',
     modern: 'Modern Times'
   }

@@ -46,13 +46,13 @@ export default {
   },
   computed: {
     computedHeight() {
-      return window.innerHeight * 0.9;
+      return window.innerHeight * 0.9
     }
   },
-  mounted() {
+  beforeMount() {
     window.setTimeout(() => {
       this.visible = true
-    }, 500)
+    }, 1000)
   }
 }
 </script>

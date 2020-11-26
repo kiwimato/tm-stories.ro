@@ -124,7 +124,7 @@ export default {
 
 <style lang="scss" scoped>
 .intro-container {
-  background-color: lighten($anzac, 20%);
+  background-color: lighten($anzac, 10%);
 }
 
 .no-scroll {
@@ -153,21 +153,14 @@ export default {
   .building-1 {
     background: url('../assets/images/building_1.png') no-repeat top/contain;
     height: 100vh;
-    opacity: 40%;
+    opacity: 0.4;
     grid-column-start: 1;
-  }
-
-  .building-2 {
-    background: url('../assets/images/building_2.png') no-repeat top/contain;
-    width: 40vw;
-    height: 90vh;
-    opacity: 40%;
   }
 
   .building-3 {
     background: url('../assets/images/building_3.png') no-repeat top/contain;
     height: 90vh;
-    opacity: 40%;
+    opacity: 0.4;
     grid-column-start: 3;
   }
 }

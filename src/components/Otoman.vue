@@ -113,7 +113,7 @@
     <div class="content-container">
       <p class="text-black author">{{ $t('otoman.text-23') }}</p>
     </div>
-    <div class="content-container avoid-clicks">
+    <div class="content-container">
       <video controls width="100%" v-scroll-animation>
       <source src="../assets/videos/ottoman.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.

@@ -61,7 +61,7 @@
         <p class="text-black" v-scroll-animation>{{ $t('medieval.text-11') }}</p>
         <p class="text-black" v-scroll-animation>{{ $t('medieval.text-12') }}</p>
     </div>
-    <div class="content-container avoid-clicks">
+    <div class="content-container">
       <video controls width="100%" v-scroll-animation>
       <source src="../assets/videos/middle_ages.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.

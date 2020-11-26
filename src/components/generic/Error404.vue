@@ -12,6 +12,6 @@ export default {
 .error-container {
   width: 100%;
   height: 100vh;
-  background-color: lighten($deep-blush, 20%);
+  background-color: lighten($deep-blush, 10%);
 }
 </style>

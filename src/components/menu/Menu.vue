@@ -268,18 +268,4 @@ export default {
     font-size: 0.8rem;
   }
 }
-
-@media (max-width: 400px) {
-  .utilities {
-    justify-content: space-between;
-
-    .left-side {
-      width: 70%;
-    }
-
-    .right-side {
-      width: 30%;
-    }
-  }
-}
 </style>

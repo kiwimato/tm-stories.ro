@@ -1,7 +1,7 @@
 <template>
   <div class="periods-container">
     <div
-      class="period-card img-1 flex align-center justify-end text-black"
+      class="period-card img-1 avoid-clicks flex align-center justify-end text-black"
     >
       <div class="text-background" />
       <div class="period-text">
@@ -83,7 +83,6 @@ export default {
     transform: skew(-15deg);
     margin-left: -24px;
     z-index: 30;
-    opacity: 95%;
   }
 
   .white-stripe {
@@ -128,7 +127,7 @@ export default {
 
   &:nth-of-type(5) {
     .text-background {
-      background-color: $cyan;
+      background-color: lighten($cyan, 10%);
     }
   }
 
@@ -139,9 +138,10 @@ export default {
   }
   
   .period-text {
-    font-family: 'Yeseva One';
+    font-family: 'Avant Garde';
     font-size: 1.8rem;
     font-weight: 600;
+    letter-spacing: 1.2px;
     z-index: 30;
     color: $black;
     width: 300px;
@@ -170,11 +170,11 @@ export default {
 }
 
 .img-5 {
-  background: url('../../assets/images/tm_interbelica_2.png') no-repeat top/100%;
+  background: url('../../assets/images/world_wars_header.png') no-repeat 100% 10%;
 }
 
 .img-6 {
-  background: url('../../assets/images/modern_thumbnail.png') no-repeat center/100%;
+  background: url('../../assets/images/modern_header-min.png') no-repeat center/100%;
 }
 
 @media(max-width: 1280px) {
@@ -234,11 +234,14 @@ export default {
   }
 
   .period-card {
+    height: calc(60vh/6.7);
     .text-background {
+      height: calc(60vh/6.7);
       width: 60%;
     }
 
     .white-stripe {
+      height: calc(60vh/6.6);
       width: 64%;
     }
 
