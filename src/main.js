@@ -7,9 +7,9 @@ import App from './App.vue'
 import About from './components/About'
 import Home from './components/Home'
 import Antiquity from './components/Antiquity'
-import Medieval from './components/Medieval'
-import Otoman from './components/Otoman'
-import Photos from './components/Photos'
+const Medieval = () => import('./components/Medieval')
+const Otoman = () => import('./components/Otoman')
+const Photos = () => import('./components/Photos')
 // import Habsburg from './components/Habsburg'
 // import Austrian from './components/Austrian'
 // import Modern from './components/Modern'

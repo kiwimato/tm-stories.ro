@@ -90,7 +90,7 @@ h1 {
 }
 
 .cover {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 2%;
   background-color: $cyan;
@@ -116,6 +116,12 @@ h1 {
   --animate-duration: 1s;
 }
 
+@media (max-width: 960px) {
+  .home {
+    grid-template-columns: 2rem auto;
+  }
+}
+
 @media (max-width: 600px) {
   .cover {
     width: 20rem;
@@ -125,13 +131,13 @@ h1 {
 
 @media (max-width: 500px) {
   .home {
-    grid-template-columns: 2rem auto;
+    grid-template-columns: 1rem auto;
   }
 }
 
 @media (max-width: 464px) {
   .cover {
-    width: 14rem;
+    width: 15rem;
     height: 100vh;
   }
 }

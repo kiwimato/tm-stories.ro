@@ -58,6 +58,7 @@ export default {
   font-family: "OpenSans-Regular", Helvetica, sans-serif;
   font-size: 16px;
   color: $black;
+  overflow: hidden;
 }
 
 .container {

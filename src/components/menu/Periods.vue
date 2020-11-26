@@ -1,7 +1,11 @@
 <template>
-  <div class="periods-container">
+  <div
+    ref="periods"
+    class="periods-container"
+  >
     <div
       class="period-card img-1 avoid-clicks flex align-center justify-end text-black"
+      :style="computedStyle"
     >
       <div class="text-background" />
       <div class="period-text">
@@ -11,6 +15,7 @@
     </div>
     <div
       class="period-card img-2 pointer flex align-center justify-end text-black"
+      :style="computedStyle"
       @click="$emit('open-page', 'medieval')"
     >
       <div class="text-background" />
@@ -21,6 +26,7 @@
     </div>
     <div
       class="period-card img-3 pointer flex align-center justify-end text-black"
+      :style="computedStyle"
       @click="$emit('open-page', 'otoman')"
     >
       <div class="text-background" />
@@ -31,6 +37,7 @@
     </div>
     <div
       class="period-card img-4 avoid-clicks flex align-center justify-end text-black"
+      :style="computedStyle"
     >
       <div class="text-background" />
       <div class="period-text">
@@ -61,7 +68,20 @@
 
 <script>
 export default {
-  name: 'Periods'
+  name: 'Periods',
+  computed: {
+    computedStyle() {
+      let height;
+      if (window.innerWidth > 768) {
+          height = window.innerHeight - (window.innerHeight * 0.25) / 6;
+      } else {
+        height= window.innerHeight - (window.innerHeight * 0.25) / 6;
+      }
+      return {
+        height
+      }
+    }
+  },
 }
 </script>
 
@@ -170,7 +190,7 @@ export default {
 }
 
 .img-5 {
-  background: url('../../assets/images/world_wars_header.png') no-repeat 100% 10%;
+  background: url('../../assets/images/world_wars_header_2.png') no-repeat 180px 30%;
 }
 
 .img-6 {
@@ -178,14 +198,6 @@ export default {
 }
 
 @media(max-width: 1280px) {
-  .period-card {
-    .period-text {
-      font-size: 1.6rem;
-    }
-  }
-}
-
-@media(max-width: 960px) {
   .period-card {
     .text-background {
       width: 32%;
@@ -195,6 +207,14 @@ export default {
       width: 34%;
     }
 
+    .period-text {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media(max-width: 960px) {
+  .period-card {
     .period-text {
       font-size: 1.4rem;
       width: 250px;
@@ -214,12 +234,12 @@ export default {
     .text-background {
       height: calc(63vh/6.7);
       margin-left: -20px;
-      width: 46%;
+      width: 50%;
     }
 
     .white-stripe {
       height: calc(63vh/6.6);
-      width: 49%;
+      width: 53%;
     }
 
     .period-text {
@@ -247,7 +267,27 @@ export default {
 
     .period-text {
       font-size: 1.1rem;
-      width: 180px;
+      width: 200px;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .period-card {
+    height: calc(60vh/6.7);
+    .text-background {
+      height: calc(60vh/6.7);
+      width: 67%;
+    }
+
+    .white-stripe {
+      height: calc(60vh/6.6);
+      width: 71%;
+    }
+
+    .period-text {
+      font-size: 1.1rem;
+      width: 200px;
     }
   }
 }

@@ -82,7 +82,7 @@ export default {
   top: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.5rem 400px auto;
+  grid-template-columns: 1.5rem 400px 20% auto;
   grid-template-rows: 10% 50% auto 10%;
 }
 
@@ -97,7 +97,7 @@ export default {
 
 .periods {
   grid-row-start: 1;
-  grid-column-start: 3;
+  grid-column-start: 4;
 }
 
 .useful-links, .email, .social-media-links, .language-select {
@@ -148,13 +148,14 @@ export default {
 
 @media(max-width: 1280px) {
   .menu {
+    grid-template-columns: 1.5rem 350px 5% auto;
     grid-template-rows: 10% auto 10%;
   }
 }
 
 @media (max-width: 960px) {
   .menu {
-    grid-template-columns: 1.5rem 350px auto;;
+    grid-template-columns: 1.5rem 325px 5% auto;
   }
 
   .utilities {
@@ -178,11 +179,11 @@ export default {
     justify-content: space-between;
 
     .left-side {
-      width: 60%;
+      width: 62%;
     }
 
     .right-side {
-      width: 40%;
+      width: 38%;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
