@@ -108,7 +108,7 @@ export default {
 }
 
 .tm-siege {
-  background: url('../../../assets/images/atacul_austriac.png') no-repeat top/cover;
+  background: url('../../../assets/images/atacul_austriac-min.png') no-repeat top/cover;
   height: 70vh;
 }
 
@@ -123,7 +123,7 @@ export default {
 }
 
 .tailor {
-  background: url('../../../assets/images/tailor-18th-cent.jpg') no-repeat top/cover;
+  background: url('../../../assets/images/tailor-18th-cent-min.jpg') no-repeat top/cover;
   height: 60vh;
 }
 

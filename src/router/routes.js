@@ -1,18 +1,15 @@
 // components
-import About from '../components/About'
-import Home from '../components/Home'
 const Antiquity = () => import('../components/Antiquity')
 const Medieval = () => import('../components/Medieval')
 const Otoman = () => import('../components/Otoman')
 const Photos = () => import('../components/Photos')
-// import Habsburg from '../components/Habsburg'
-// import Austrian from '../components/Austrian'
-// import Modern from '../components/Modern'
+const About = () => import('../components/About')
+const Home = () => import('../components/Home')
 
-import Error404 from '../components/generic/Error404'
+const Error404 = () => import('../components/generic/Error404')
 
-import austroHabsburgRoutes from './austro-habsburg';
-import worldWarRoutes from './world-wars';
+const austroHabsburgRoutes = require('./austro-habsburg');
+const worldWarRoutes = require('./world-wars');
 
 const baseRoutes = [
   { 
@@ -65,4 +62,5 @@ const baseRoutes = [
 ];
 
 const routes = baseRoutes.concat(austroHabsburgRoutes, worldWarRoutes);
-export default routes;
+
+module.exports = routes;

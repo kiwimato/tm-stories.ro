@@ -1,8 +1,8 @@
-import WorldWars from '../components/Austro-Habsburg/Austro-Habsburg'
+const WorldWars = () => import('../components/Austro-Habsburg/Austro-Habsburg')
 const ahStory1 = () => import('../components/Austro-Habsburg/stories/Story1')
 const ahStory2 = () => import('../components/Austro-Habsburg/stories/Story2')
 
-export default [{
+module.exports = [{
   path: '/austro-habsburg',
   name: 'austro-habsburg',
   component: WorldWars,

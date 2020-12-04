@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
-import routes from './router/routes.js'
+import * as routes from './router/routes.js'
+
+console.log('routes----', routes);
 
 //components
 import App from './App.vue'
@@ -16,7 +18,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGlobe, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import '@mdi/font/css/materialdesignicons.css'
 
 // translations
 import { EN_TRANSLATIONS } from './translations/en'

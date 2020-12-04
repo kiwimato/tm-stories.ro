@@ -1,4 +1,6 @@
 const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const routerPaths = require('./src/router/routes').map(r => r.path).filter(p => !p.match(/\*/));
  
 module.exports = {
   css: {
@@ -30,6 +32,15 @@ module.exports = {
       as(entry) {
         if (/\.woff2$/.test(entry)) return 'font';
         return 'style';
+      }
+    }),
+    new SitemapPlugin({
+      base: 'https://tmstories.ro/',
+      paths: routerPaths,
+      options: {
+        fileName: 'sitemap.xml',
+        lastMod: true,
+        changeFreq: 'monthly'
       }
     })
   }

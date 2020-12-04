@@ -9,8 +9,9 @@
       ref="home"
       class="home"
     >
-    <div v-if="!loading">
+    <div v-if="!loading && mainImage">
       <img
+        alt="tmstories main image, showing some of Timişoara's famous landmarks"
         class="background-image"
         :src="`data:image/png;base64, ${mainImage}`"
       />

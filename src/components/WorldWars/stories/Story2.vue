@@ -225,7 +225,7 @@ export default {
 }
 
 .piata-iosefin {
-  background: url('../../../assets/images/piata_iosefin.jpg') no-repeat top/cover;
+  background: url('../../../assets/images/piata_iosefin-min.jpg') no-repeat top/cover;
   height: 70vh;
 }
 

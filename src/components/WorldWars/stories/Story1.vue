@@ -122,7 +122,7 @@ export default {
 }
 
 .main-image {
-  background: url('../../../assets/images/wwi_image-min.jpg') no-repeat bottom/cover;
+  background: url('../../../assets/images/wwi_image-min-2.jpg') no-repeat top/cover;
 }
 
 .soldiers-going-to-war-1 {

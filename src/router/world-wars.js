@@ -1,9 +1,9 @@
-import WorldWars from '../components/WorldWars/WorldWars'
+const WorldWars = () => import('../components/WorldWars/WorldWars')
 const WWStory1 = () => import('../components/WorldWars/stories/Story1')
 const WWStory2 = () => import('../components/WorldWars/stories/Story2')
 const WWStory3 = () => import('../components/WorldWars/stories/Story3')
 
-export default [{
+module.exports = [{
   path: '/world-wars',
   name: 'world-wars',
   component: WorldWars,
