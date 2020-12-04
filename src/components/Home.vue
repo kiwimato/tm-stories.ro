@@ -1,7 +1,7 @@
 <template>
   <div>
     <loader 
-      v-if="!visible"
+      v-if="loading"
       key="loader"
       :height="computedHeight"
     />
@@ -9,22 +9,21 @@
       ref="home"
       class="home"
     >
-    <div
-      v-if="visible"
-      class="background-image animate__animated animate__fadeInRight"
-      key="image"
-    />
-    <div
-      v-if="visible"
-      class="title-container animate__animated animate__slideInLeft"
-      key="title"
-    >
-      <h1 class="page-title">{{$t(`homePage.greeting`)}}</h1>
+    <div v-if="!loading">
+      <img
+        class="background-image"
+        :src="`data:image/png;base64, ${mainImage}`"
+      />
     </div>
     <div
-      v-if="visible"
+      v-if="!loading"
+      class="title-container animate__animated animate__slideInLeft"
+    >
+      <h1 class="hero-title">{{$t(`homePage.greeting`)}}</h1>
+    </div>
+    <div
+      v-if="mainImage"
       class="cover"
-      key="cover"
     />
     </div>
     <div class="opacity-screen" />
@@ -33,6 +32,7 @@
 
 <script>
 import Loader from './generic/Loader.vue'
+import axios from 'axios'
 
 export default {
   name: 'Home',
@@ -41,7 +41,8 @@ export default {
   },
   data() {
     return {
-      visible: false,
+      loading: false,
+      mainImage: null
     }
   },
   computed: {
@@ -50,9 +51,28 @@ export default {
     }
   },
   beforeMount() {
-    window.setTimeout(() => {
-      this.visible = true
-    }, 1000)
+    window.setTimeout(() => this.getMainPhoto(), 500);
+  },
+  methods: {
+    async getMainPhoto() {
+      this.loading = true;
+      let response;
+      const request = axios.get(`${window.location.origin}/public-images/modern-min.png`, {
+        responseType: 'arraybuffer'
+      })
+      
+      try {
+        response = await request;
+        this.mainImage = Buffer.from(response.data, 'binary').toString('base64')
+        this.loading = false;
+      } catch(e) {
+        console.error('There was an error', e);
+        this.loading = false;
+        return;
+      }
+      
+      this.loading = false;
+    }
   }
 }
 </script>
@@ -66,14 +86,6 @@ export default {
   grid-template-rows: 5% auto;
 }
 
-.background-image {
-  height: 100vh;
-  width: 100vw;
-  background: url('../assets/images/modern-min.png') no-repeat center/cover;
-  display: flex;
-  align-items: center;
-}
-
 .title-container {
   z-index: 12;
   width: 25%;
@@ -81,6 +93,10 @@ export default {
   grid-row-start: 2;
   display: flex;
   align-items: center;
+}
+
+.background-image {
+  width: 100vw;
 }
 
 h1 {

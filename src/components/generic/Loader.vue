@@ -38,7 +38,7 @@ export default {
 }
 
 .animation {
-  background: url('../../assets/images/loader_1.gif') no-repeat center/70%;
+  background: url('../../assets/images/loader.gif') no-repeat center/70%;
   height: 200px;
   width: 200px;
 }

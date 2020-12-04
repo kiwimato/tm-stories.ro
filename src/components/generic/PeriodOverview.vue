@@ -3,9 +3,9 @@
 	<slot name="title-container">
 		<div class="title-container">
 				<div class="title">
-					<h2 class="text-white animate__animated animate__slideInLeft">
+					<div class="text-white animate__animated animate__slideInLeft">
 						{{ title }}
-					</h2>
+					</div>
 				</div>
 			</div>
 		</slot>

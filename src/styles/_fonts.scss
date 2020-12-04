@@ -1,20 +1,23 @@
 @font-face {
   font-family: 'SirinStencil-Regular';
-  src: url('~@/assets/fonts/SirinStencil-Regular.ttf') format('ttf');
-  src: url('~@/assets/fonts/SirinStencil-Regular.woff') format('woff');
-  src: url('~@/assets/fonts/SirinStencil-Regular.woff2') format('woff2');
+  src: url('/fonts/SirinStencil-Regular.ttf') format('ttf');
+  src: url('/fonts/SirinStencil-Regular.woff') format('woff');
+  src: url('/fonts/SirinStencil-Regular.woff2') format('woff2');
+  font-display: block;
 }
 
 @font-face {
   font-family: 'YesevaOne-Regular';
-  src:  url('~@/assets/fonts/YesevaOne-Regular.ttf') format('ttf');
-  src: url('~@/assets/fonts/YesevaOne-Regular.woff') format('woff');
-  src: url('~@/assets/fonts/YesevaOne-Regular.woff2') format('woff2');
+  src:  url('/fonts/YesevaOne-Regular.ttf') format('ttf');
+  src: url('/fonts/YesevaOne-Regular.woff') format('woff');
+  src: url('/fonts/YesevaOne-Regular.woff2') format('woff2');
+  font-display: block;
 }
 
 @font-face {
   font-family: 'OpenSans-Regular';
-  src:  url('~@/assets/fonts/OpenSans-Regular.ttf') format('ttf');
-  src:  url('~@/assets/fonts/OpenSans-Regular.woff') format('woff');
-  src:  url('~@/assets/fonts/OpenSans-Regular.woff2') format('woff2');
+  src:  url('/fonts/OpenSans-Regular.ttf') format('ttf');
+  src:  url('/fonts/OpenSans-Regular.woff') format('woff');
+  src:  url('/fonts/OpenSans-Regular.woff2') format('woff2');
+  font-display: block;
 }

@@ -61,6 +61,11 @@ export default {
   overflow: hidden;
 }
 
+.hero-title {
+  font-family: 'YesevaOne-Regular', 'Tahoma', sans-serif;
+  font-size: 10rem;
+}
+
 .container {
   max-width: 100% !important;
   padding: 0 !important;

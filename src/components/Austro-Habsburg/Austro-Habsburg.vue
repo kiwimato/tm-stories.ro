@@ -6,9 +6,9 @@
     <template #title-container>
       <div class="title-container">
         <div class="title">
-          <h2 class="text-white animate__animated animate__slideInLeft">
+          <div class="text-white animate__animated animate__slideInLeft">
             {{ $t('ah.title') }}
-          </h2>
+          </div>
         </div>
       </div>
     </template>
