@@ -47,7 +47,7 @@ export default {
   methods: {
     onOpenPage(event) {
       this.openMenu = false;
-      this.$router.push(event);
+      this.$router.push({ name: event });
     }
   }
 };

@@ -1,18 +1,18 @@
 <template>
-  <div class='page-container'>
+  <div class="page-container">
     <div class="intro-container">
       <div class="intro-text">
-        <h2 class="text-white page-title">
+        <h2 class="text-white page-title animate__animated animate__slideInLeft">
           {{ $t('medieval.title')}}
         </h2>
       </div>
       <div 
-        class="main-image animated avoid-clicks"
+        class="main-image animated avoid-clicks animate__animated animate__slideInRight"
         key="main-image"
       />   
     </div>
-    <div class="content-container mt-n-2">
-      <p class="text-black intro pt-0" v-scroll-animation v-html="$t('medieval.intro')" />
+    <div class="content-container">
+      <p class="text-black intro" v-scroll-animation v-html="$t('medieval.intro')" />
     </div>
     <div class="content-container">
       <h4 class="text-black highlight-text" v-scroll-animation v-html="$t('medieval.text-1')" />
@@ -63,8 +63,8 @@
     </div>
     <div class="content-container">
       <video controls width="100%" v-scroll-animation>
-      <source src="../assets/videos/middle_ages.mp4" type="video/mp4">
-        Sorry, your browser doesn't support embedded videos.
+        <source src="../assets/videos/middle_ages.mp4" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
   </div>
@@ -84,8 +84,9 @@ export default {
 .container-1 {
   margin: 3rem 0;
 }
+
 .main-image {
-  background: url('../assets/images/middle-ages-knights.jpg') no-repeat top/contain;
+  background: url('../assets/images/middle-ages-knights-min.jpg') no-repeat top/cover;
 }
 
 .left-image {

@@ -4,8 +4,8 @@
     class="periods-container"
   >
     <div
-      class="period-card img-1 avoid-clicks flex align-center justify-end text-black"
-      :style="computedStyle"
+      class="period-card img-1 pointer flex align-center text-black"
+      @click="$emit('open-page', 'antiquity')"
     >
       <div class="text-background" />
       <div class="period-text">
@@ -14,8 +14,7 @@
       <div class="white-stripe" />
     </div>
     <div
-      class="period-card img-2 pointer flex align-center justify-end text-black"
-      :style="computedStyle"
+      class="period-card img-2 pointer flex align-center text-black"
       @click="$emit('open-page', 'medieval')"
     >
       <div class="text-background" />
@@ -25,8 +24,7 @@
       <div class="white-stripe" />
     </div>
     <div
-      class="period-card img-3 pointer flex align-center justify-end text-black"
-      :style="computedStyle"
+      class="period-card img-3 pointer flex align-center text-black"
       @click="$emit('open-page', 'otoman')"
     >
       <div class="text-background" />
@@ -36,17 +34,18 @@
       <div class="white-stripe" />
     </div>
     <div
-      class="period-card img-4 avoid-clicks flex align-center justify-end text-black"
-      :style="computedStyle"
+      class="period-card img-4 pointer flex align-center text-black"
+      @click="$emit('open-page', 'austro-habsburg')"
     >
       <div class="text-background" />
       <div class="period-text">
-        {{ $t('periods.habsburgic') }}
+        {{ $t('ah.title') }}
       </div>
       <div class="white-stripe" />
     </div>
     <div
-      class="period-card img-5 avoid-clicks flex align-center justify-end text-black"
+      class="period-card img-5 pointer flex align-center text-black"
+      @click="$emit('open-page', 'world-wars')"
     >
        <div class="text-background" />
         <div class="period-text">
@@ -55,7 +54,7 @@
         <div class="white-stripe" />
     </div>
     <div
-      class="period-card img-6 avoid-clicks flex align-center justify-end text-black"
+      class="period-card img-6 avoid-clicks flex align-center text-black"
     >
       <div class="text-background" />
       <div class="period-text">
@@ -68,20 +67,7 @@
 
 <script>
 export default {
-  name: 'Periods',
-  computed: {
-    computedStyle() {
-      let height;
-      if (window.innerWidth > 768) {
-          height = window.innerHeight - (window.innerHeight * 0.25) / 6;
-      } else {
-        height= window.innerHeight - (window.innerHeight * 0.25) / 6;
-      }
-      return {
-        height
-      }
-    }
-  },
+  name: 'Periods'
 }
 </script>
 
@@ -158,13 +144,13 @@ export default {
   }
   
   .period-text {
-    font-family: 'Avant Garde';
+    font-family: 'OpenSans-Regular';
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: 1.2px;
     z-index: 30;
     color: $black;
-    width: 300px;
+    width: 340px;
   }
 
   &:hover {
@@ -234,12 +220,12 @@ export default {
     .text-background {
       height: calc(63vh/6.7);
       margin-left: -20px;
-      width: 50%;
+      width: 53%;
     }
 
     .white-stripe {
       height: calc(63vh/6.6);
-      width: 53%;
+      width: 56%;
     }
 
     .period-text {
@@ -248,7 +234,7 @@ export default {
   }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
   .periods-container {
     padding: 0 0.5rem 0 2.2rem;
   }
@@ -257,37 +243,36 @@ export default {
     height: calc(60vh/6.7);
     .text-background {
       height: calc(60vh/6.7);
-      width: 60%;
+      width: 63%;
     }
 
     .white-stripe {
       height: calc(60vh/6.6);
-      width: 64%;
+      width: 67%;
     }
 
     .period-text {
       font-size: 1.1rem;
-      width: 200px;
     }
   }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 400px) {
   .period-card {
     height: calc(60vh/6.7);
     .text-background {
       height: calc(60vh/6.7);
-      width: 67%;
+      width: 75%;
     }
 
     .white-stripe {
       height: calc(60vh/6.6);
-      width: 71%;
+      width: 79%;
     }
 
     .period-text {
       font-size: 1.1rem;
-      width: 200px;
+      width: 270px;
     }
   }
 }

@@ -1,19 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
+import routes from './router/routes.js'
 
-// components
+//components
 import App from './App.vue'
-import About from './components/About'
-import Home from './components/Home'
-import Antiquity from './components/Antiquity'
-const Medieval = () => import('./components/Medieval')
-const Otoman = () => import('./components/Otoman')
-const Photos = () => import('./components/Photos')
-// import Habsburg from './components/Habsburg'
-// import Austrian from './components/Austrian'
-// import Modern from './components/Modern'
-import Error404 from './components/generic/Error404'
 
 //directives
 import ScrollAnimation from './directives/scroll-animation'
@@ -22,7 +13,7 @@ import ScrollAnimation from './directives/scroll-animation'
 import AnimateCSS from 'animate.css'
 import HoverCSS from 'hover.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import '@mdi/font/css/materialdesignicons.css'
@@ -45,63 +36,11 @@ const i18n = new VueI18n({
   messages: TRANSLATIONS,
 })
 
-library.add(faGlobe, faInstagram, faFacebook)
+library.add(faGlobe, faChevronLeft, faInstagram, faFacebook)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.directive('scroll-animation', ScrollAnimation)
 Vue.prototype.clipboardData = window.clipboardData;
-
-const routes = [
-  { 
-    path: '/',
-    component: Home,
-    meta: { title: 'menu.home' }
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: About,
-    meta: { title: 'menu.about' }
-  },
-  {
-    path: '/home',
-    name: 'home',
-    component: Home,
-    meta: { title: 'menu.home' }
-  },
-  { 
-    path: '/antiquity',
-    name: 'antiquity',
-    component: Antiquity,
-    meta: { title: 'antiquity.title' }
-  },
-  { 
-    path: '/medieval',
-    name: 'medieval',
-    component: Medieval,
-    meta: { title: 'medieval.title' }
-  },
-  {
-    path: '/otoman',
-    name: 'otoman',
-    component: Otoman,
-    meta: { title: 'otoman.title' }
-  },
-  {
-    path: '/photos',
-    name: 'photos',
-    component: Photos,
-    meta: { title: 'menu.photos' }
-  },
-  // { path: '/habsburg', component: Habsburg },
-  // { path: '/austrian', component: Austrian },
-  // { path: '/modern', component: Modern },
-  { 
-    path: '*',
-    component: Error404,
-    name: 'Error404'
-  }
-]
 
 const router = new VueRouter({
   mode: 'history',
