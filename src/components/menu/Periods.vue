@@ -111,11 +111,19 @@ export default {
     .text-background {
       background-color: $coral;
     }
+
+    .period-text {
+      color: darken($coral, 40%);
+    }
   }
 
   &:nth-of-type(2) {
     .text-background {
       background-color: #97a97f;
+    }
+
+    .period-text {
+      color: darken(#97a97f, 30%);
     }
   }
 
@@ -123,11 +131,19 @@ export default {
     .text-background {
       background-color: lighten($indigo, 20%);
     }
+
+    .period-text {
+      color: darken($indigo, 20%);
+    }
   }
 
   &:nth-of-type(4) {
     .text-background {
       background-color: darken($coral, 5%);
+    }
+
+    .period-text {
+      color: darken($coral, 42%);
     }
   }
 
@@ -135,21 +151,28 @@ export default {
     .text-background {
       background-color: lighten($cyan, 10%);
     }
+
+    .period-text {
+      color: darken($cyan, 32%);
+    }
   }
 
   &:nth-of-type(6) {
     .text-background {
       background-color: $gold;
     }
+
+    .period-text {
+      color: darken($gold, 35%);
+    }
   }
   
   .period-text {
-    font-family: 'OpenSans-Regular';
-    font-size: 1.8rem;
+    font-family: 'YesevaOne_Regular';
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 1.2px;
     z-index: 30;
-    color: $black;
     width: 340px;
   }
 
@@ -186,15 +209,15 @@ export default {
 @media(max-width: 1280px) {
   .period-card {
     .text-background {
-      width: 32%;
-    }
-
-    .white-stripe {
       width: 34%;
     }
 
+    .white-stripe {
+      width: 36%;
+    }
+
     .period-text {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -229,7 +252,7 @@ export default {
     }
 
     .period-text {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -252,7 +275,7 @@ export default {
     }
 
     .period-text {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -262,17 +285,17 @@ export default {
     height: calc(60vh/6.7);
     .text-background {
       height: calc(60vh/6.7);
-      width: 75%;
+      width: 86%;
     }
 
     .white-stripe {
       height: calc(60vh/6.6);
-      width: 79%;
+      width: 90%;
     }
 
     .period-text {
       font-size: 1.1rem;
-      width: 270px;
+      width: 250px;
     }
   }
 }

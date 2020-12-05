@@ -1,6 +1,12 @@
 @import '_fonts';
 @import '_colors';
 
+.hero-title {
+  color: #fff;
+  font-weight: 100;
+  margin-block-start: 0;
+}
+
 .heading {
   font-family: 'Yeseva One', 'AvantGarde', 'Garamond', serif;
   font-size: 7rem;
@@ -41,8 +47,43 @@
   font-size: 0.9rem;
 }
 
+@media (max-width: 1800px) {
+  .hero-title {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero-title {
+    font-size: 7rem;
+  }
+}
+
 @media(max-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+
   .small-text {
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 3rem;
   }
 }

@@ -9,10 +9,12 @@
       ref="home"
       class="home"
     >
-    <div v-if="!loading && mainImage">
+    <div 
+      v-if="!loading && mainImage"
+      class="background-image"
+    >
       <img
         alt="tmstories main image, showing some of Timişoara's famous landmarks"
-        class="background-image"
         :src="`data:image/png;base64, ${mainImage}`"
       />
     </div>
@@ -97,13 +99,12 @@ export default {
 }
 
 .background-image {
-  width: 100vw;
-}
-
-h1 {
-  color: #fff;
-  font-weight: 100;
-  margin-block-start: 0;
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background-position: 100px 5px;
+  }
 }
 
 .cover {
