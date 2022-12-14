@@ -1,7 +1,6 @@
 .DS_Store
 /src/assets/videos
 
-
 # local env files
 .env.local
 .env.*.local
