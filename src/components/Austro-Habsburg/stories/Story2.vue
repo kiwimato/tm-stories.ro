@@ -85,7 +85,7 @@
     </div>
     <div class="content-container">
       <video controls width="100%" v-scroll-animation>
-        <source src="../../../assets/videos/timisoara.mp4" type="video/mp4">
+        <source src="https://tmstories.fra1.cdn.digitaloceanspaces.com/media/timisoara.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>

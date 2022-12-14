@@ -115,7 +115,7 @@
     </div>
     <div class="content-container">
       <video controls width="100%" v-scroll-animation>
-        <source src="../assets/videos/ottoman.mp4" type="video/mp4">
+        <source src="https://tmstories.fra1.cdn.digitaloceanspaces.com/media/ottoman.mp4" type="video/mp4">
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>

@@ -1,8 +1,7 @@
 <template>
   <div>
-    <loader 
+    <loader
       v-if="loading"
-      key="loader"
       :height="computedHeight"
     />
     <div
